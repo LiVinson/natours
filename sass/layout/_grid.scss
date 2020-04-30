@@ -1,19 +1,20 @@
 .row {
   max-width: $grid-width; //standard: 1140px
-  background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
+    //selects all rows and adds margin to bottom, except last row
     margin-bottom: $gutter-vertical;
   }
 
-  @include clearfix;
+  @include clearfix; //sets hack on ::after pseudo-element
 
   [class^="col-"] {
-    background-color: orangered;
+    //selects element in row with class starting with col-
     float: left;
 
     &:not(:last-child) {
+      //selects all columns except the last one in row, and adds margin to the right
       margin-right: $gutter-horizontal;
     }
   }
