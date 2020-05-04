@@ -1,10 +1,11 @@
 .navigation {
 
+    //Selecting used to control appearance of background and nav list
     &__checkbox {
         display: none;
-
     }
 
+    //Label element for hidden checkbox. Serves as a fixed button containing hamburger menu.
     &__button {
         background-color: $color-white;
         height: 7rem;
@@ -15,8 +16,12 @@
         right: 6rem;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align:center;
+        cursor: pointer;
+        
     }
-    //The navigation that opens on clicking the button. Covered by the button initially
+    //The full screen image that opens on clicking the hamburger button.
+    // Covered by the button initially, and scales to fill screen on click of button.
     &__background {
         height: 6rem;
         width: 6rem;
@@ -29,12 +34,15 @@
         transition: transform .8s cubic-bezier(.86, 0, .07, 1);      
     }
 
+    //Contains nav list items. Fixed so always visible on scroll.
+    //Initially hidden with no width. Appears on top of full screen
+    // background image when the hamburger button is selected.
+    //Serves as container to center ul inside
     &__nav {
         height: 100vh;
         position: fixed;
         top: 0;
-        left: 0; 
-     
+        left: 0;      
         z-index: 1500;
         opacity: 0;
         width: 0;
@@ -54,6 +62,8 @@
         margin: 1rem;
     }
 
+    //Has angled solid gradient of primary color and transparent. Initially size is very large so
+    //only transparent half of background is visible.
     &__link {
         &:link,
         &:visited {
@@ -75,6 +85,9 @@
             }
         }
 
+        //On hover/selection of nav list items, reset background position along the x-axis 
+        //to the left so the white half of gradient becomes increasingly visible until 
+        //it is 100% of background
         &:hover,
         &:active {
             //Changes location of the background-image along the x-axis to the left so the white half of gradient becomes increasingly visible
@@ -85,12 +98,76 @@
 
     }
 
+    //Serves as click event for hamburger button/label that makes the background full size
     &__checkbox:checked ~ &__background {
          transform: scale(80);
     }
 
+    //Makes the li elements inside fo the background visible and full width.
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         width: 100%;
    }
+
+   //Hamburger menu icon
+   &__icon {
+        margin-top: 3.5rem;
+        position: relative;
+
+        //Creates a 3 thin lines.
+       &,
+       &::before,
+       &::after {
+           width: 3rem;
+           height: 2px;
+           background-color:$color-gray-dark-3;
+           display: inline-block;
+       }
+
+       //Aligns the before and after lines to the same starting position on the left.
+
+       &::before,
+       &::after {
+           content: "";
+           position: absolute;
+           left: 0;
+           transition: all .2s;
+       }
+
+       //Creates 'stacked' hamburger effect with one pseudo-element above and one below
+       &::before {
+           top: -.8rem;
+       }
+       
+       &::after {
+        top: .8rem;
+    }
+   }
+
+   &__button:hover &__icon::before {
+       top: -1rem;
+   }
+
+   &__button:hover &__icon::after {
+    top: 1rem;
+    }
+
+    //when checkbox is selected (nav open), select the sibling label button, and then it's child hamburger icon
+    &__checkbox:checked + &__button &__icon {
+        background-color:transparent;
+
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+
+        
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg)
+        
+    }
 }
