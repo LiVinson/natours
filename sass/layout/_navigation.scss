@@ -48,14 +48,37 @@
     }
 
     &__list-item {
-        
+        margin: 1rem;
     }
 
     &__link {
-        font-size: 3rem;
-        font-weight: 300;
-        color: $color-white;
-        text-decoration: none;       
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-white;
+            text-decoration: none; 
+            text-transform: uppercase ;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            //Increases background so only the 'transparent' color is initially visible behind the link
+            background-size: 230%;
+            transition: all .4s;
+
+            span {
+                margin-right:1.5rem;
+                display: inline-block;
+            }
+        }
+
+        &:hover,
+        &:active {
+            //Changes location of the background-image along the x-axis to the left so the white half of gradient becomes increasingly visible
+            background-position: 100%;
+            color: $color-primary;
+            transform: translateX(1rem);
+        }
 
     }
 }
