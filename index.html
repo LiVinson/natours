@@ -25,9 +25,11 @@
 
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__list-item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
+                <li class="navigation__list-item"><a href="#" class="navigation__link"><span>01</span>About Natours</a>
+                </li>
                 <li class="navigation__list-item"><a href="#" class="navigation__link"><span>02</span>Benefits</a></li>
-                <li class="navigation__list-item"><a href="#" class="navigation__link"><span>03</span>Popular Tours</a></li>
+                <li class="navigation__list-item"><a href="#" class="navigation__link"><span>03</span>Popular Tours</a>
+                </li>
                 <li class="navigation__list-item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
                 <li class="navigation__list-item"><a href="#" class="navigation__link"><span>05</span>Book Now</a></li>
             </ul>
@@ -43,7 +45,7 @@
                 <span class="heading-primary__main">Outdoors</span>
                 <span class="heading-primary__sub">is where life happens</span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+            <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
     </header>
 
@@ -127,7 +129,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-large">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -162,7 +164,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -195,7 +197,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$497</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -228,7 +230,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -372,6 +374,76 @@
             </div>
         </div>
     </footer>
+
+    <!-- dark background that overlays site when popup opens-->
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="woman on canoe" class="popup__img">
+                <img src="img/nat-9.jpg" alt="man overlooking mountains" class="popup__img">
+            </div>
+
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">
+                    Start Booking Now
+                </h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read the terms and
+                    conditions</h3>
+                <p class="popup__text u-margin-bottom-medium">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet cumque voluptatibus consequatur
+                    odit ab veritatis adipisci at autem amet, explicabo dignissimos debitis aut eius nihil illum minus
+                    atque quos porro. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, nostrum mollitia. Obcaecati magni
+                    nam dignissimos adipisci, excepturi quod non iure incidunt fugit aut explicabo placeat. Numquam
+                    harum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, nostrum mollitia. Obcaecati
+                    magni
+                    nam dignissimos adipisci, excepturi quod non iure incidunt fugit aut explicabo placeat. Numquam
+
+                </p>
+                <div>
+                    <a href="#" class="btn btn--green">Book Now</a>
+                </div>
+
+            </div>
+            <!-- <div class="row">
+                <div class="col-1-of-3">
+                    <img src="img/nat-8.jpg" alt="woman on canoe" class="popup__content__img popup__content__img--top">
+                    <img src="img/nat-9.jpg" alt="man overlooking mountains" class="popup__content__img popup__content__img--bottom">
+
+                </div>
+                <div class="col-2-of-3">
+                    <div class="popup__text u-margin-bottom-medium">
+                        <h2 class="heading-secondary u-margin-bottom-small">
+                            Start Booking Now
+                        </h2>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Important - Please read the terms and conditions</h3>
+                        <div class="row">
+                            <div class="col-1-of-2">
+                                <p class="popup__text__column u-margin-bottom-small">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet cumque voluptatibus consequatur odit ab veritatis adipisci at autem amet, explicabo dignissimos debitis aut eius nihil illum minus atque quos porro.
+                                Lorem ipsum, dolor sitminus atque quos porro.
+    
+                                </p>
+                                <div>
+                                    <a href="#" class="btn btn--green">Book Now</a>
+                                </div>
+                            </div>
+                            <div class="col-1-of-2">
+                                <p class="popup__text__column">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet cumque voluptatibus consequatur odit ab veritatis adipisci at autem amet, explicabo dignissimos debitis aut eius nihil illum minus atque quos porro.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.  
+    
+                                </p>
+    
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
 
     <!-- Grid System 
     <section class="grid-test">

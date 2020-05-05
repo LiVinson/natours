@@ -144,30 +144,30 @@
     }
    }
 
+   //Creates 'movement' for the top and bottom of hamburger on hover
    &__button:hover &__icon::before {
        top: -1rem;
    }
 
    &__button:hover &__icon::after {
-    top: 1rem;
+        top: 1rem;
     }
 
     //when checkbox is selected (nav open), select the sibling label button, and then it's child hamburger icon
+    //and make it transparent.
     &__checkbox:checked + &__button &__icon {
         background-color:transparent;
-
     }
 
+    //when checkbox is selected (nav open), select the sibling label button, and then the before and after elements
+    //of the child hamburger icon and rotate them to form an X.
     &__checkbox:checked + &__button &__icon::before {
         top: 0;
-        transform: rotate(135deg);
-
-        
+        transform: rotate(135deg);       
     }
 
     &__checkbox:checked + &__button &__icon::after {
         top: 0;
-        transform: rotate(-135deg)
-        
+        transform: rotate(-135deg);        
     }
 }
