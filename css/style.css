@@ -1,3 +1,18 @@
+/*
+0 - 600px: Phone
+600-900px Tablet portrait
+900 -1200: Tablet landscape
+[1200 - 1800 ]: Normal styles
+1800px+ Big Desktop 
+
+@breapoint:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop 
+
+  1em = 16px;
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +22,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   padding: 3rem;
@@ -227,7 +251,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1500;
+  z-index: -1500;
   opacity: 0;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -268,6 +292,7 @@ body {
   transform: scale(80); }
 
 .navigation__checkbox:checked ~ .navigation__nav {
+  z-index: 1500;
   opacity: 1;
   width: 100%; }
 
