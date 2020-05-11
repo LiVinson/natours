@@ -18,6 +18,16 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align:center;
         cursor: pointer;
+
+        @include responsive(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include responsive(phone){
+            top: 3rem;
+            right: 3rem;
+        }
         
     }
     //The full screen image that opens on clicking the hamburger button.
@@ -31,7 +41,17 @@
         top: 6.5rem;
         right: 6.5rem;
         z-index: 1000;
-        transition: transform .8s cubic-bezier(.86, 0, .07, 1);      
+        transition: transform .8s cubic-bezier(.86, 0, .07, 1);   
+        
+        @include responsive(tab-port){
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include responsive(phone){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     //Contains nav list items. Fixed so always visible on scroll.

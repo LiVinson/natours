@@ -14,11 +14,11 @@ html {
   //   font-size: 50%;
   // }
 
-  @include responsive(tab-land) { //width <=1 200px
+  @include responsive(tab-land) { //width <=1200px
     font-size: 56.25%; //1 rem = 9px
   }
 
-  @include responsive(tab-port) { //width <=600px
+  @include responsive(tab-port) { //width <=900px
     font-size: 50%; //1 rem = 8px
   }
 
@@ -27,7 +27,11 @@ html {
   }
 }
 
-body {
-  padding: 3rem;
+body {  
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include responsive(tab-port) {
+    padding: 0;
+  }
 }
