@@ -15,6 +15,10 @@
     //Change for the <button> element
     border: none;
     cursor: pointer;
+
+    @include responsive(tab-land) {
+      padding: 1rem 3rem;
+    }
   }
 
   &:hover {
