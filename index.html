@@ -347,7 +347,11 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box u-margin-bottom-large">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png"
+                        alt="Natours logo" media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png" alt="Natours logo" >              
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -369,7 +373,7 @@
                     Schmedtmann for an <a href="https://www.udemy.com/course/advanced-css-and-sass/"
                         class="footer__link">Advanced CSS and Sass</a> course. Copyright &copy: by Jonas Schmedtmann.
                     You are allowed to use this webpage for personal and commercial use, but not to claim it as your own
-                    design. A credit to the original author, Jonas Schmedtmann is of course highly appreciated.
+                    design. To see additional work from Lisa Vinson, check out <a href="https://livinson.github.io/LisaVinson/" class="footer__link">her portfolio.</a>
                 </p>
             </div>
         </div>
