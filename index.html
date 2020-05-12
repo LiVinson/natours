@@ -72,10 +72,30 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
+
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                        alt="Trees and river in front of mountain side"
+                        sizes="(max-width: 900px) 18vw, (max-width: 600px) 26vw, 300px"
+                        class="composition__photo composition__photo--p1"
+                        src="img/nat-1-large.jpg">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" 
+                        alt="Trees and river in front of mountain side"
+                        sizes="(max-width: 900px) 18vw, (max-width: 600px) 26vw, 300px"
+                        class="composition__photo composition__photo--p2"
+                        src="img/nat-2-large.jpg">
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" 
+                        alt="Trees and river in front of mountain side"
+                        sizes="(max-width: 900px) 18vw, (max-width: 600px) 26vw, 300px"
+                        class="composition__photo composition__photo--p3"
+                        src="img/nat-3-large.jpg">
+
+
                         <!--BEM naming component__element component__element--modifier-->
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <!-- <img src="img/nat-1-large.jpg" alt="Trees and river in front of mountain side" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                     </div>
                 </div>
             </div>
@@ -350,7 +370,7 @@
             <picture class="footer__logo">
                 <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png"
                         alt="Natours logo" media="(max-width: 37.5em)">
-                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png" alt="Natours logo" >              
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png" alt="Natours logo" src="img/logo-green-2x.png">              
             </picture>
         </div>
         <div class="row">
@@ -383,7 +403,16 @@
     <div class="popup" id="popup">
         <div class="popup__content">
             <div class="popup__left">
-                <img src="img/nat-8.jpg" alt="woman on canoe" class="popup__img popup__img--1">
+                <img srcset="img/nat-8-600px.jpg 600w, img/nat-8-1000px.jpg 1000w, img/nat-8-1500px.jpg 1500w, img/nat-8-2000px.jpg 2000w"
+                sizes="(min-width:1800px) 28vw,
+                        (max-width:1200px) 35vw"                        
+                class="popup__img popup__img--1"
+                alt="woman on canoe"
+                src="img/nat-8-1500px.jpg"
+                >
+
+                
+                <!-- <img src="img/nat-8.jpg" alt="woman on canoe" class="popup__img popup__img--1"> -->
                 <img src="img/nat-9.jpg" alt="man overlooking mountains" class="popup__img popup__img--2">
             </div>
 
