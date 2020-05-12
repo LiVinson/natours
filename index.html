@@ -90,12 +90,6 @@
                         sizes="(max-width: 900px) 18vw, (max-width: 600px) 26vw, 300px"
                         class="composition__photo composition__photo--p3"
                         src="img/nat-3-large.jpg">
-
-
-                        <!--BEM naming component__element component__element--modifier-->
-                        <!-- <img src="img/nat-1-large.jpg" alt="Trees and river in front of mountain side" class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                     </div>
                 </div>
             </div>
@@ -281,7 +275,14 @@
             <div class="row">
                 <div class="story">
                     <figure class="story__shape">
-                        <img src="img/nat-8.jpg" alt="person on a tour" class="story__image">
+
+                        <img srcset="img/nat-8-1500px.jpg 1500w, img/nat-8-1000px.jpg 1000w, img/nat-8-600px.jpg 600w, img/nat-8-400px.jpg 400w"
+                        sizes="(min-width:1800px) 25vw, (max-width:1200px) 25vw, (max-width:900px) 30vw, (max-width: 600px) 45vw, 600px"
+                    
+                        alt="woman on a canoe" 
+                        class="story__image"
+                        src="img/nat-8-600px.jpg"                     
+                        >
                         <figcaption class="story__caption">Mary Smith</figcaption>
                     </figure>
                     <div class="story__text">
@@ -300,7 +301,13 @@
             <div class="row">
                 <div class="story">
                     <figure class="story__shape">
-                        <img src="img/nat-9.jpg" alt="person on a tour" class="story__image">
+                        <img srcset="img/nat-9-1400px.jpg 1400w, img/nat-9-1000px.jpg 1000w, img/nat-9-600px.jpg 600w, img/nat-9-400px.jpg 400w"
+                        sizes="(min-width:1800px) 25vw, (max-width:1200px) 25vw, (max-width:900px) 30vw, (max-width: 600px) 45vw, 600px"
+                    
+                        alt="man looking over cliff" 
+                        class="story__image"
+                        src="img/nat-9-600px.jpg"                   
+                        >
                         <figcaption class="story__caption">Jack Wilson</figcaption>
                     </figure>
                     <div class="story__text">
@@ -404,16 +411,21 @@
         <div class="popup__content">
             <div class="popup__left">
                 <img srcset="img/nat-8-600px.jpg 600w, img/nat-8-1000px.jpg 1000w, img/nat-8-1500px.jpg 1500w, img/nat-8-2000px.jpg 2000w"
-                sizes="(min-width:1800px) 28vw,
-                        (max-width:1200px) 35vw"                        
-                class="popup__img popup__img--1"
-                alt="woman on canoe"
-                src="img/nat-8-1500px.jpg"
+                    sizes="(min-width:1800px) 28vw,
+                            (max-width:1200px) 35vw, 400px"                        
+                    class="popup__img popup__img--1"
+                    alt="woman on canoe"
+                    src="img/nat-8-1000px.jpg"
                 >
 
-                
-                <!-- <img src="img/nat-8.jpg" alt="woman on canoe" class="popup__img popup__img--1"> -->
-                <img src="img/nat-9.jpg" alt="man overlooking mountains" class="popup__img popup__img--2">
+                <img srcset="img/nat-9-600px.jpg 600w, img/nat-9-1000px.jpg 1000w, img/nat-9-1400px.jpg 1400w, img/nat-9-1700px.jpg 1700w, img/nat-9-2000.jpg 2000w"
+                    sizes="(min-width:1800px) 30vw,
+                            (max-width:1200px) 35vw,
+                            (max-width:900px) 60vw, 400px" 
+                            class="popup__img popup__img--2"   
+                            alt="man looking over cliff"
+                            src="img/nat-9-1000px.jpg"             
+                >             
             </div>
 
             <div class="popup__right">
@@ -439,42 +451,6 @@
                 </div>
 
             </div>
-            <!-- <div class="row">
-                <div class="col-1-of-3">
-                    <img src="img/nat-8.jpg" alt="woman on canoe" class="popup__content__img popup__content__img--top">
-                    <img src="img/nat-9.jpg" alt="man overlooking mountains" class="popup__content__img popup__content__img--bottom">
-
-                </div>
-                <div class="col-2-of-3">
-                    <div class="popup__text u-margin-bottom-medium">
-                        <h2 class="heading-secondary u-margin-bottom-small">
-                            Start Booking Now
-                        </h2>
-                        <h3 class="heading-tertiary u-margin-bottom-small">Important - Please read the terms and conditions</h3>
-                        <div class="row">
-                            <div class="col-1-of-2">
-                                <p class="popup__text__column u-margin-bottom-small">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet cumque voluptatibus consequatur odit ab veritatis adipisci at autem amet, explicabo dignissimos debitis aut eius nihil illum minus atque quos porro.
-                                Lorem ipsum, dolor sitminus atque quos porro.
-    
-                                </p>
-                                <div>
-                                    <a href="#" class="btn btn--green">Book Now</a>
-                                </div>
-                            </div>
-                            <div class="col-1-of-2">
-                                <p class="popup__text__column">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet cumque voluptatibus consequatur odit ab veritatis adipisci at autem amet, explicabo dignissimos debitis aut eius nihil illum minus atque quos porro.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.  
-    
-                                </p>
-    
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -533,7 +509,6 @@
                 Col 2 of 4
             </div>
         </div>
-
         <div class="row">
             <div class="col-1-of-4">
                 Col 1 of 4
@@ -542,11 +517,8 @@
                 Col 3 of 4
             </div>
         </div>
-
-
     </section>
 -->
 
 </body>
-
 </html>
