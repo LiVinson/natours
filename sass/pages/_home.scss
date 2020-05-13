@@ -19,9 +19,18 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url("../../img/nat-4.jpg");
-
+    url("../../img/nat-4-small.jpg");
   transform: skewY(-7deg);
+
+  @media(min-resolution: 192dpi) and (min-width: 37.5em), 
+  (min-width: 125em) {
+      background-image: linear-gradient(
+      to right bottom,
+      rgba($color-secondary-light, 0.8),
+      rgba($color-secondary-dark, 0.8)
+    ),
+    url("../../img/nat-4.jpg");
+  }
 
     //Selects all direct children
   & > * {
@@ -72,12 +81,37 @@
       rgba($color-white, 0.8) 50%,
       transparent 50%
     ),
-    url("../img/nat-10.jpg");
+    url("../img/nat-10-small.jpg");
   background-size: 100%;
   border-radius: $default-border-radius;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
-  @include responsive(tab-land) {
+    //If high resolution and >600px or >2000px: use high res 50% gradient coverage
+    @media(min-resolution: 192dpi) and (min-width:35.7em),
+    (min-width: 125em) {
+      background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 50%,
+        transparent 50%
+      ),
+      url("../img/nat-10.jpg");
+    }
+
+    //<1200 low resolution: use smaller image 65% gradient coverage
+  @include responsive(tab-land)  {
+    background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.8) 0%,
+      rgba($color-white, 0.8) 65%,
+      transparent 65%
+    ),
+    url("../img/nat-10-small.jpg");
+    background-size: cover;
+  }
+
+  //<1200 high resolution: use larger image 65% gradient coverage
+  @media(min-resolution: 192dpi) and (max-width:75em){
     background-image: linear-gradient(
       105deg,
       rgba($color-white, 0.8) 0%,
@@ -85,18 +119,31 @@
       transparent 65%
     ),
     url("../img/nat-10.jpg");
-    background-size: cover;
   }
 
+//<900 low resolution: use smaller image 100% gradient coverage
   @include responsive(tab-port) {
     background-image: linear-gradient(
       to right,
       rgba($color-white, 0.8) 0%,
       rgba($color-white, 0.8) 100%      
     ),
-    url("../img/nat-10.jpg");
-
+    url("../img/nat-10-small.jpg");    
   }
+//high resolution >600 and <900: use larger image 100% gradient coverage
+  @media(min-resolution: 192dpi) and (max-width:56.25em) and (min-width: 37.5em){
+    background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.8) 0%,
+      rgba($color-white, 0.8) 100%,
+      transparent 100%
+    ),
+    url("../img/nat-10.jpg");
+  }
+
+
+
+
   &__form {
     width: 50%;
     padding: 6rem;
