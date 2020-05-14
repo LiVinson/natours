@@ -1,6 +1,7 @@
 .row {
   max-width: $grid-width; //standard: 1140px
   margin: 0 auto;
+  padding: 0 2rem;
 
   &:not(:last-child){
     //selects all rows and adds margin to bottom, except last row
