@@ -40,7 +40,9 @@
         
         @include responsive(tab-port) {
             width: 65%;
-            display: block            
+            display: block;
+            overflow:auto;    
+            max-height: 95vh;        
         }
 
     }
