@@ -54,4 +54,4 @@ I am not open to accepting pull requests at this time, but feel free to fork the
 
 ## License 🔓
 
-This project is licensed under the [MIT license](https://github.com/LiVinson/hacker-news-clone/blob/master/LICENSE).
+This project is licensed under the [MIT license](https://github.com/LiVinson/natours/blob/master/LICENSE).
