@@ -11,13 +11,13 @@ The focus on Natours was to learn and practive various css techniques and techno
 Clone this repository and navigate into the natours directory.
 
 ```bash
-clone git@github.com:LiVinson/natours.git
+git clone git@github.com:LiVinson/natours.git
 cd natours
 ```
 
 Install all of the dependencies listed in the package.json
 
-```bash
+```node
 npm install
 ```
 
