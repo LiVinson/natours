@@ -6,6 +6,10 @@ A sample nature tour website deployed using [Netlify.](https://natoursadventures
 
 The focus on Natours was to learn and practive various css techniques and technologies including keyframe and transform animations, various hover effects, custom form radio buttons, and image/solid gradients. This is not a functional website or company.
 
+![Website header component](./repo-images/natours-1.png?raw=true)
+
+![Bookings section](./repo-images/natours-2.png?raw=true)
+
 ## Run Locally 🏃🏿‍♀️
 
 Clone this repository and navigate into the natours directory.
